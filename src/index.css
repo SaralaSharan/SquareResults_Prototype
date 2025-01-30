@@ -16,12 +16,12 @@
 
 @layer components {
   .nav-link {
-    @apply relative px-4 py-2 text-white/90 hover:text-white transition-colors duration-200;
+    @apply relative px-4 py-2 hover:opacity-100 transition-colors duration-200;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300;
+    @apply absolute left-0 bottom-0 w-0 h-0.5 transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -41,7 +41,11 @@
 }
 
 .glass-nav {
-  @apply backdrop-blur-md bg-white/10 border-b border-white/20;
+  @apply backdrop-blur-md bg-white/90 border-b border-gray-200;
+}
+
+.nav-link:hover::after {
+  background-color: currentColor;
 }
 
 .hero-text {
